@@ -86,6 +86,6 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 # Update
 apt-get update
 # Install Docker CE
-apt-get install docker-ce=17.06.2~ce-0~ubuntu
+apt-get install -y docker-ce=17.06.2~ce-0~ubuntu
 # Add reid to permitted docker users
 usermod -aG docker reid
