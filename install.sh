@@ -86,7 +86,7 @@ usermod -aG docker reid
 
 # Install Oh-My-Zsh
 cd /home/reid
-sudo -u reid sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo -u reid -H sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # Set as reid user default shell
 sed -i 's|/home/reid:/bin/bash|/home/reid:/usr/bin/zsh|g' /etc/passwd
 # Setup zsh profile
