@@ -7,12 +7,11 @@ apt-get install -y nano sudo curl git zsh
 adduser --disabled-password --gecos "Peter Reid,,," reid
 # Add to sudoers
 usermod -aG sudo reid
-cd /home/reid
 # Setup ssh keys
-sudo -u reid mkdir .ssh
-sudo -u reid touch authorized_keys
-sudo -u reid chmod 700 ~/.ssh
-sudo -u reid chmod 600 ~/.ssh/authorized_keys
+sudo -u reid mkdir /home/reid/.ssh
+sudo -u reid touch /home/reid/authorized_keys
+sudo -u reid chmod 700 /home/reid/.ssh
+sudo -u reid chmod 600 /home/reid/.ssh/authorized_keys
 sudo -u reid curl https://launchpad.net/~peter-reid/+sshkeys > .ssh/authorized_keys
 
 # Disable Root login
