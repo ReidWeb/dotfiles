@@ -65,7 +65,7 @@ echo "/etc/dynmotd/dynmotd.sh" >> /etc/profile
 
 # Setup cron script to check for updates
 line="0 * * * * /etc/dynmotd/update-checker.sh"
-(crontab -u userhere -l; echo "$line" ) | crontab -u root -
+(crontab -u root -l; echo "$line" ) | crontab -u root -
 
 # Set system to UTC
 sudo timedatectl set-timezone Etc/UTC
