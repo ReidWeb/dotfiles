@@ -11,6 +11,8 @@ cd /home/reid
 # Setup ssh keys
 sudo -u reid mkdir .ssh
 sudo -u reid touch authorized_keys
+sudo -u reid chmod 700 ~/.ssh
+sudo -u reid chmod 600 ~/.ssh/authorized_keys
 sudo -u reid curl https://launchpad.net/~peter-reid/+sshkeys > .ssh/authorized_keys
 
 # Disable Root login
