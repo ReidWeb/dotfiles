@@ -19,7 +19,7 @@ sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
 systemctl restart sshd
 
 # Disable passwordless login
-sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
 systemctl restart sshd
 
@@ -27,13 +27,6 @@ systemctl restart sshd
 sed -i 's/Port 22/Port 222/g' /etc/ssh/sshd_config
 #Restart SSH
 systemctl restart sshd
-
-# Install Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# Set as reid user default shell
-sed -i 's|/home/reid:/bin/bash|/home/reid:/usr/bin/zsh|g' /etc/passwd
-# Setup zsh profile
-curl https://raw.githubusercontent.com/ReidWeb/dotfiles/master/.zshrc > /home/reid/.zshrc
 
 # Install MOTD script
 cd /tmp
@@ -87,3 +80,12 @@ apt-get update
 apt-get install -y docker-ce=17.06.2~ce-0~ubuntu
 # Add reid to permitted docker users
 usermod -aG docker reid
+
+# Install Oh-My-Zsh
+sudo su reid
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Set as reid user default shell
+sed -i 's|/home/reid:/bin/bash|/home/reid:/usr/bin/zsh|g' /etc/passwd
+# Setup zsh profile
+curl https://raw.githubusercontent.com/ReidWeb/dotfiles/master/.zshrc > /home/reid/.zshrc
+exit
