@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install dependencies
-apt-get install nano sudo curl git zsh
+apt-get install -y nano sudo curl git zsh
 
 # Add reid user
 adduser --disabled-password --gecos "Peter Reid,,," reid
