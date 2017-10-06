@@ -6,7 +6,7 @@ apt-get install -y nano sudo curl git zsh
 # Add reid user
 adduser --disabled-password --gecos "Peter Reid,,," reid
 # Add to sudoers
-usermod -aG sudo {user}
+usermod -aG sudo reid
 cd /home/reid
 # Setup ssh keys
 sudo -u reid mkdir .ssh
