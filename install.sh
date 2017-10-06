@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install dependencies
-apt-get install -y nano sudo curl git zsh
+apt-get install -y nano sudo curl git zsh apt-transport-https ca-certificates software-properties-common
 
 # Add reid user
 adduser --disabled-password --gecos "Peter Reid,,," reid
@@ -77,8 +77,6 @@ line="0 * * * * /etc/dynmotd/update-checker.sh"
 # Set system to UTC
 sudo timedatectl set-timezone Etc/UTC
 
-# Add docker deb dependencies
-sudo apt-get install apt-transport-https ca-certificates software-properties-common
 # Add docker gpg key
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # Add docker repos
