@@ -28,6 +28,9 @@ sed -i 's/Port 22/Port 222/g' /etc/ssh/sshd_config
 #Restart SSH
 systemctl restart sshd
 
+# Add na password req for sudo
+echo 'reid ALL=(ALL:ALL) NOPASSWD: ALL' | sudo EDITOR='tee -a' visudo
+
 # Install MOTD script
 cd /tmp
 git clone https://github.com/ReidWeb/linuxmotd.git
