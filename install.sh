@@ -89,4 +89,4 @@ apt-get update
 # Install Docker CE
 apt-get install docker-ce=17.06.2~ce-0~ubuntu
 # Add reid to permitted docker users
-usermod -aG docker $USER
+usermod -aG docker reid
