@@ -82,11 +82,10 @@ apt-get install -y docker-ce=17.06.2~ce-0~ubuntu
 usermod -aG docker reid
 
 # Install Oh-My-Zsh
-sudo su reid
 cd /home/reid
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sudo -u reid sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # Set as reid user default shell
 sed -i 's|/home/reid:/bin/bash|/home/reid:/usr/bin/zsh|g' /etc/passwd
 # Setup zsh profile
-curl https://raw.githubusercontent.com/ReidWeb/dotfiles/master/.zshrc > /home/reid/.zshrc
-exit
+sudo -u reid  curl https://raw.githubusercontent.com/ReidWeb/dotfiles/master/.zshrc > /home/reid/.zshrc
+
