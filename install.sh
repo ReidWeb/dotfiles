@@ -10,7 +10,7 @@ usermod -aG sudo reid
 cd /home/reid
 # Setup ssh keys
 sudo -u reid mkdir .ssh
-sudo -u reid nano authorized_keys
+sudo -u reid touch authorized_keys
 sudo -u reid curl https://launchpad.net/~peter-reid/+sshkeys > .ssh/authorized_keys
 
 # Disable Root login
