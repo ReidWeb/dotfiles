@@ -9,7 +9,7 @@ adduser --disabled-password --gecos "Peter Reid,,," reid
 usermod -aG sudo reid
 # Setup ssh keys
 sudo -u reid mkdir /home/reid/.ssh
-sudo -u reid touch /home/reid/authorized_keys
+sudo -u reid touch /home/reid/.ssh/authorized_keys
 sudo -u reid chmod 700 /home/reid/.ssh
 sudo -u reid chmod 600 /home/reid/.ssh/authorized_keys
 sudo -u reid curl https://launchpad.net/~peter-reid/+sshkeys > .ssh/authorized_keys
