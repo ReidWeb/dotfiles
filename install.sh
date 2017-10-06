@@ -41,7 +41,7 @@ git clone https://github.com/ReidWeb/linuxmotd.git
 cd linuxmotd
 
 #### MOTD INSTALL SCRIPT
-nstalldir="/etc/dynmotd"
+installdir="/etc/dynmotd"
 mkdir $installdir
 cp dynmotd.sh $installdir/dynmotd.sh
 chmod 755 $installdir/dynmotd.sh
