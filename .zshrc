@@ -51,7 +51,7 @@ ZSH_THEME="bira"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git-aliases git npm node python osx pip python aws brew docker yarn zsh-completions kubectl)
+plugins=(git-aliases git npm node python osx pip python aws docker yarn zsh-completions kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
