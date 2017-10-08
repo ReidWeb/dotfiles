@@ -55,7 +55,7 @@ echo -e "\033[0;33mScript setup complete, please refer to https://github.com/Rei
 ####
 
 # Ensure reid is added to sudoers (read by motd script)
-sed -i 's/sudo:x:27:/sudo:x:27:reid/g' /etc/group
+#sed -i 's/sudo:x:27:/sudo:x:27:reid/g' /etc/group
 
 # Disable last log motd
 sed -i 's/PrintLastLog yes/PrintLastLog no/g' /etc/ssh/sshd_config  
